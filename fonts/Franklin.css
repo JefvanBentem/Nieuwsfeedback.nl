@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U7yzLtA-61L0zjfpz7YlT3Q0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Libre Franklin';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Libre Franklin'), local('LibreFranklin-Regular'), url(https://fonts.gstatic.com/s/librefranklin/v1/PFwjf3aDdAQPvNKUrT3U70L2euXwouSmDRNACsKL_Ek.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
