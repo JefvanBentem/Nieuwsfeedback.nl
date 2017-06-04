@@ -47,7 +47,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
       }
       .grijs {
         color: grey;
-        font-size: 1.4em;
+        font-size: 1.1em;
       }
       .reactievak form textarea {
         border-radius: 10px;
