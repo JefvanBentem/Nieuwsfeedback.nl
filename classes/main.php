@@ -74,6 +74,8 @@ class main {
     $resultaat = mysqli_query($this->connectie, $sql);
     if ($resultaat) {
       header("Location: /bedankt.php");
+    } else {
+      return "Probeer het later opnieuw!";
     }
   }
 }
