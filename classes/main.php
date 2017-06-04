@@ -36,7 +36,7 @@ class main {
       } else {
         $m = 1;
       }
-      header("Location: /comment.php?m=$m?nieuwsbriefid=$nieuwsbriefid");
+      header("Location: /comment.php?m=$m&nieuwsbriefid=$nieuwsbriefid");
     } else {
       return "Probeer het later opnieuw.";
     }
