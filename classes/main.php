@@ -54,7 +54,7 @@ class main {
     $id = $this->beveilig($id);
     $sql = "SELECT * FROM nieuwsbrief WHERE randomid = '$id'";
     $resultaat = mysqli_query($this->connectie, $sql);
-    if (mysqli_num_rows($resultaat) >= 0) {
+    if (mysqli_num_rows($resultaat) <= 0) {
       return false;
     } else {
       return true;
