@@ -13,8 +13,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
   include 'classes/import.php';
   $object = New main;
-  $output->$postbericht($bericht, $nieuwsbriefid);
-  $output = "Goed";
+  $output = $object->$postbericht($bericht, $nieuwsbriefid);
 }
 ?>
 <!DOCTYPE html>
