@@ -6,12 +6,12 @@
     <title>Bedankt!</title>
     <style>
     .containertekst {
-      width: 200px;
-      height: 200px;
-      background-color: #333333;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 150%;
     }
     </style>
   </head>
