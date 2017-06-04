@@ -1,6 +1,6 @@
 <?php
 $message = $_GET["m"];
-if ($message != "1" and != "0") {
+if ($message != "1" and $message != "0") {
   $message = 1;
 }
 if ($message == 1) {
