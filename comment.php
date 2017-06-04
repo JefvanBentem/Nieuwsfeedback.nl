@@ -4,9 +4,9 @@ if ($message != "1" and != "0") {
   $message = 1;
 }
 if ($message == 1) {
-  $message = "";
+  $message = "Bedankt voor uw reactie! Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen over deze editie, dan kan dat hier:";
 } else {
-  $message = "";
+  $message = "Bedankt voor uw reactie! Jammer dat u deze editie wat minder vond. Laat hier achter wat wij in de volgende edities kunnen verbeteren:";
 }
 if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   $bericht = $_POST["bericht"];
