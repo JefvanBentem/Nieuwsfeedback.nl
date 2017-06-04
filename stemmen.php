@@ -1,12 +1,12 @@
 <?php
-if (!isset($_GET['nieuwsbriefid']) or !isset($_GET['actie'])) {
-  $error = "Er is iets fout gegaan!";
-} else {
+if (isset($_GET['nieuwsbriefid']) && isset($_GET['actie'])) {
   $actie = $_GET["actie"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
   include 'classes/import.php';
   $object = New main;
   $output = $object->stem($actie, $nieuwsbriefid);
+} else {
+  $error = "Er is iets fout gegaan!";
 }
 ?>
 <!DOCTYPE html>
