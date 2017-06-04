@@ -94,7 +94,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
       <div class="reactievak">
         <form action="comment.php<?php
         if(isset($_GET["nieuwsbriefid"])) {
-          echo $_GET["nieuwsbriefid"];
+          echo "?nieuwsbriefid=" . $_GET["nieuwsbriefid"];
         }
         ?>" method="post">
           <textarea name="bericht" maxlength="2000" required></textarea>
