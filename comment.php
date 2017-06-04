@@ -33,6 +33,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
         left: 15px;
       }
       .logocontainer {
+        margin-top: 100px;
         width: 300px;
         margin: 0 auto;
       }
@@ -78,7 +79,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   <body>
     <header>
       <div class="logocontainer">
-        <img src="img/Logo.png" alt="Logo" width="100%" height="160px">
+        <img src="img/Logo.png" alt="Logo" style="max-width:100%;max-height:100%;">
       </div>
     </header>
     <section>
