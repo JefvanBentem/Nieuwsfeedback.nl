@@ -1,4 +1,5 @@
 <?php
+$_GET['test'] = "Hallo";
 if (isset($_GET['nieuwsbriefid']) && isset($_GET['actie'])) {
   $actie = $_GET["actie"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
