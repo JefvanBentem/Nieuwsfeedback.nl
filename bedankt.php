@@ -14,7 +14,7 @@
       font-size: 150%;
       color: #2467a8;
     }
-    body {
+    * {
       margin: 0;
     }
     </style>
