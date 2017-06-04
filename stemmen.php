@@ -1,5 +1,5 @@
 <?php
-if (empty($_GET["nieuwsbriefid"]) or empty($_GET["actie"])) {
+if (!isset($_GET["nieuwsbriefid"]) or !isset($_GET["actie"])) {
   $error = "Er is iets fout gegaan!";
 } else {
   $actie = $_GET["actie"];
