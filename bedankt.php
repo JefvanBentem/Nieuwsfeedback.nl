@@ -12,12 +12,13 @@
       align-items: center;
       justify-content: center;
       font-size: 150%;
+      color: #2467a8;
     }
     </style>
   </head>
   <body>
     <div class="containertekst">
-      <p>Bedankt voor de reactie!</p>
+      <p>Bedankt voor uw reactie.</p>
     </div>
   </body>
 </html>
