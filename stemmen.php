@@ -6,7 +6,7 @@ if (!isset($_GET['nieuwsbriefid']) or !isset($_GET['actie'])) {
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
   include 'classes/import.php';
   $object = New main;
-  $error = $object->stem($actie, $nieuwsbriefid);
+  $output = $object->stem($actie, $nieuwsbriefid);
 }
 ?>
 <!DOCTYPE html>
@@ -20,6 +20,7 @@ if (!isset($_GET['nieuwsbriefid']) or !isset($_GET['actie'])) {
     <p>
     <?php
     if (isset($error)) {
+      echo $output;
       echo $error;
     }
     ?>
