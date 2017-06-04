@@ -14,6 +14,8 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   include 'classes/import.php';
   $object = New main;
   $output->$postbericht($bericht, $nieuwsbriefid);
+} else {
+  $output = "Error";
 }
 ?>
 <!DOCTYPE html>
