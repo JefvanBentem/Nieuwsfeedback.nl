@@ -78,7 +78,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   <body>
     <header>
       <div class="logocontainer">
-        <img src="img/Logo.png" alt="Logo" width="300px" height="160px">
+        <img src="img/Logo.png" alt="Logo" height="160px">
       </div>
     </header>
     <section>
