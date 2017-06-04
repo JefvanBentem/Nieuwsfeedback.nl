@@ -70,7 +70,7 @@ class main {
     }
     $ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
     $tijd = time();
-    $sql = "INSERT INTO nieuwsbriefreactie(ip,tijd,nieuwsbrief,bericht) VALUES('$ip','$tijd','$nieuwsbriefid','$bericht')";
+    $sql = "INSERT INTO nieuwsbriefreactie(ip,tijd,nieuwsbriefid,bericht) VALUES('$ip','$tijd','$nieuwsbriefid','$bericht')";
     $resultaat = mysqli_query($this->connectie, $sql);
     if ($resultaat) {
       header("Location: /bedankt.php");
