@@ -1,5 +1,4 @@
 <?php
-$_GET['test'] = "Hallo";
 if (isset($_GET['nieuwsbriefid']) && isset($_GET['actie'])) {
   $actie = $_GET["actie"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
@@ -20,7 +19,7 @@ if (isset($_GET['nieuwsbriefid']) && isset($_GET['actie'])) {
   <body>
     <p>
     <?php
-    if (isset($error)) {
+    if (isset($error) or isset($output)) {
       echo $output;
       echo $error;
     }
