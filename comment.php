@@ -1,5 +1,20 @@
 <?php
-
+$message = $_GET["m"];
+if ($message != "1" and != "0") {
+  $message = 1;
+}
+if ($message == 1) {
+  $message = "";
+} else {
+  $message = "";
+}
+if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
+  $bericht = $_POST["bericht"];
+  $nieuwsbriefid = $_GET["nieuwsbriefid"];
+  include 'classes/import.php';
+  $object = New main;
+  $output->$postbericht($bericht, $nieuwsbriefid);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -70,15 +85,20 @@
       <div class="tekst">
         <h1>Bedankt voor uw reactie!</h1>
         <p class="grijs">
-          Bedankt voor uw stem. Mocht u nog iets kwijt willen dan kan dat hier:
+          <?php
+            echo $message;
+          ?>
         </p>
       </div>
       <div class="reactievak">
         <form action="comment.php" method="post">
-          <textarea name="bericht" maxlength="1500" required></textarea>
+          <textarea name="bericht" maxlength="2000" required></textarea>
           <br>
           <input type="submit">
         </form>
+        <?php
+          echo $output;
+        ?>
       </div>
     </section>
     <footer>
