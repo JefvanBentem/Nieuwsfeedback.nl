@@ -28,7 +28,7 @@ class main {
     //Alles is gecheckt
     $ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
     $tijd = time();
-    $sql = "INSERT INTO nieuwsbriefstem(ip,type,tijd,nieuwsbrief) VALUES('$ip','$actie','$tijd','$nieuwsbriefid')";
+    $sql = "INSERT INTO nieuwsbriefstem(ip,type,tijd,nieuwsbriefid) VALUES('$ip','$actie','$tijd','$nieuwsbriefid')";
     $resultaat = mysqli_query($this->connectie, $sql);
     if ($resultaat) {
       if ($actie != "like") {
