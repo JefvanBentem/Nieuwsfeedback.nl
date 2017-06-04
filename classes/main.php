@@ -60,7 +60,7 @@ class main {
       return true;
     }
   }
-  public function($bericht, $nieuwsbriefid) {
+  public function postbericht($bericht, $nieuwsbriefid) {
     if (strlen($bericht) > 2000) {
       return "Het bericht mag niet langer zijn dan 2000 karakters.";
     }
