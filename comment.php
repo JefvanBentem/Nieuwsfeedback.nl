@@ -33,7 +33,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
         left: 15px;
       }
       .logocontainer {
-        margin-top: 100px;
+        padding-top: 50px;
         width: 300px;
         margin: 0 auto;
       }
@@ -44,7 +44,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
       }
       .tekst {
         width: 370px;
-        margin-top: 100px;
+        margin-top: 50px;
       }
       .grijs {
         color: grey;
