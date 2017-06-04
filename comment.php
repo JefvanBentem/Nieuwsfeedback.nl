@@ -9,12 +9,12 @@ if ($message == 1) {
   $message = "Bedankt voor uw reactie! Jammer dat u deze editie wat minder vond. Laat hier achter wat wij in de volgende edities kunnen verbeteren:";
 }
 if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
-  $output = "Goed";
   $bericht = $_POST["bericht"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
   include 'classes/import.php';
   $object = New main;
   $output->$postbericht($bericht, $nieuwsbriefid);
+  $output = "Goed";
 }
 ?>
 <!DOCTYPE html>
