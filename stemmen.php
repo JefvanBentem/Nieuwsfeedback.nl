@@ -2,7 +2,7 @@
 if (empty($_GET["nieuwsbriefid"]) or empty($_GET["actie"])) {
   $error = "Er is iets fout gegaan!";
 } else {
-  $actie = $_GET["actie"]);
+  $actie = $_GET["actie"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
   include 'classes/import.php';
   $object = New main;
