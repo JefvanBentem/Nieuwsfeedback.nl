@@ -7,7 +7,7 @@
     <style>
     .containertekst {
       width: 100vw;
-      height: 95vh;
+      height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
