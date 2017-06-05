@@ -86,7 +86,7 @@ class admin {
     }
     $sql = "SELECT * FROM nieuwsbrief WHERE randomid = '$id'";
     $resultaat = mysqli_query($this->connectie, $sql);
-    if (mysqli_num_rows($resultaat) >= 0) {
+    if (mysqli_num_rows($resultaat) > 0) {
       return "Die nieuwsbrief naam bestaat al!";
     }
     $tijd = time();
