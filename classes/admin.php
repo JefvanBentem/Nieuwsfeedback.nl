@@ -21,6 +21,13 @@ class admin {
     $row = mysqli_fetch_assoc($resultaat);
     return $row['COUNT(*)'];
   }
+  //Krijg alle nieuwsbrieven
+  public function krijgallenieuwsbrieven($startop) {
+    $startop = $this->beveilig($startop);
+    $sql = "SELECT randomid FROM nieuwsbrief ORDER BY `nieuwsbrief`.`aangemaaktop` DESC LIMIT 10 OFFSET $startop";
+    $resultaat = mysqli_query($this->connectie, $sql);
+    return $resultaat;
+  }
   //Aantallikes
   public function hoeveellikes($nieuwsbrief) {
     $nieuwsbrief = $this->beveilig($nieuwsbrief);
@@ -44,12 +51,5 @@ class admin {
     $resultaat = mysqli_query($this->connectie, $sql);
     $row = mysqli_fetch_assoc($resultaat);
     return $row['COUNT(*)'];
-  }
-  //Krijg alle nieuwsbrieven
-  public function krijgallenieuwsbrieven($startop) {
-    $startop = $this->beveilig($startop);
-    $sql = "SELECT randomid FROM nieuwsbrief ORDER BY `nieuwsbrief`.`aangemaaktop` DESC LIMIT 10 OFFSET $startop";
-    $resultaat = mysqli_query($this->connectie, $sql);
-    return $resultaat;
   }
 }

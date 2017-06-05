@@ -39,19 +39,26 @@ if (!isset($_SESSION["ingelogd"])) {
         <th>Verwijder</th>
       </tr>
       <?php
+      //Zoek de hoeveelheid pagina's uit
       $hoeveelheidqueries = $object->aantalnieuwsbrieven();
       $hoeveelheidpaginas = $hoeveelheidqueries / 10;
       $hoeveelheidpaginas = ceil($hoeveelheidpaginas);
+      //Huidige pagina nummer
       $page = isset($_GET['page']) ? $_GET['page'] : 0;
+      //Vanaf wat wil je zien
       $vanafwelknummerwiljezien = $page * 10;
+      //Krijg de nieuwsbrieven
       $krijgallenieuwsbrieven = $object->krijgallenieuwsbrieven($vanafwelknummerwiljezien);
+      //Loop voor iedere nieuwsbrief
       while ($array = mysqli_fetch_array($krijgallenieuwsbrieven)) {
+        //Zet de variabelen
         $naam = $array['randomid'];
         $likes = $object->hoeveellikes($naam);
         $dislikes = $object->hoeveeldislikes($naam);
         $aantalcomments = $object->hoeveelcomments($naam);
         $ziecomment = "Komt nog";
         $verwijder = "Komt nog";
+        //Display in tabel
         echo "<tr>";
         echo "<td>$naam</td>";
         echo "<td>$likes</td>";
@@ -65,6 +72,7 @@ if (!isset($_SESSION["ingelogd"])) {
     </table>
     <p>Pagina's:</p>
     <?php
+    //Pagina systeem
     $i=0;
     for($i=0; $i<$hoeveelheidpaginas; $i++) {
       $class = $i == $page ? 'selected' : '';
