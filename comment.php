@@ -79,6 +79,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         background-color: #115695;
         border-radius: 15px;
         border-width: 2px;
+        font-size: 1.1em;
         border-color: #115695;
         color: white;
         padding: 5px 10px;
@@ -119,7 +120,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         ?>" method="post">
           <textarea name="bericht" maxlength="2000" required></textarea>
           <br>
-          <input type="submit">
+          <input type="submit" value="Verzenden">
         </form>
         <?php
           //Output de output
