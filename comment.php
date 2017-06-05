@@ -85,7 +85,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         padding: 5px 10px;
         border-style: solid;
       }
-      .reactievak form input:focus {
+      .reactievak form input:active {
         border-color: grey;
       }
       @media (max-width: 750px) {
