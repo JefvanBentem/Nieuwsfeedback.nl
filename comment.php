@@ -71,6 +71,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         width: 400px;
         height: 200px;
         max-width: 90vw;
+        margin: 0 auto;
         resize: none;
         border-style: solid;
         font-family: 'Libre Franklin', sans-serif;
