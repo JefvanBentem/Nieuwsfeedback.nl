@@ -91,6 +91,7 @@ if (!isset($_SESSION["ingelogd"])) {
       echo "</div>";
     }
     ?>
+    <br>
     <p><a href="adminpanel.php">Ga terug</a></p>
     </section>
   </body>
