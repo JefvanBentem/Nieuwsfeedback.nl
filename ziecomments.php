@@ -37,7 +37,7 @@ if (!isset($_SESSION["ingelogd"])) {
       //Nieuwsbrief
       $nieuwsbrief = $_GET['nieuwsbrief'];
       //Zoek de hoeveelheid pagina's uit
-      $hoeveelheidqueries = $object->hoeveelcomments();
+      $hoeveelheidqueries = $object->hoeveelcomments($nieuwsbrief);
       $hoeveelheidpaginas = $hoeveelheidqueries / 10;
       $hoeveelheidpaginas = ceil($hoeveelheidpaginas);
       //Huidige pagina nummer

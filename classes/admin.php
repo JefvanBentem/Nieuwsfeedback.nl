@@ -77,6 +77,7 @@ class admin {
     header("Location: resultaten.php");
     exit;
   }
+  //Maak een nieuwsbrief
   public function maaknieuwsbrief($id) {
     $id = $this->beveilig($id);
     $id = preg_replace('/\s+/S', "", $id);
