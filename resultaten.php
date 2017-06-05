@@ -44,8 +44,8 @@ if (!isset($_SESSION["ingelogd"])) {
       $hoeveelheidpaginas = ceil($hoeveelheidpaginas);
       $page = isset($_GET['page']) ? $_GET['page'] : 0;
       $vanafwelknummerwiljezien = $page * 10;
-      $allenieuwsbrieven = $object->krijgallenieuwsbrieven($vanafwelknummerwiljezien);
-      while ($array = mysqli_fetch_array($allenieuwsbrieven)) {
+      $krijgallenieuwsbrieven = $object->krijgallenieuwsbrieven($vanafwelknummerwiljezien);
+      while ($array = mysqli_fetch_array($krijgallenieuwsbrieven)) {
         $naam = $array['randomid'];
         $likes = $object->hoeveellikes($naam);
         $dislikes = $object->hoeveeldislikes($naam);
