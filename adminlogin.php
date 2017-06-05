@@ -5,6 +5,7 @@ session_start();
 if (isset($_SESSION["ingelogd"])) {
   //Als je bent ingelogd mag je hier weg
   header("Location: /adminpanel.php");
+  exit;
 }
 //Checkt of je gebruikersnaam en wachtwoord hebt ingevuld
 if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
@@ -17,6 +18,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
   if ($gebruikersnaam == adminusername && $wachtwoord == adminwachtwoord) {
     $_SESSION["ingelogd"] = true;
     header("Location: /adminpanel.php");
+    exit;
   } else {
     $message = "Foute inloggegevens!";
   }

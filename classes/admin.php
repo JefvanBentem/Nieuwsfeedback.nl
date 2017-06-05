@@ -77,4 +77,19 @@ class admin {
     header("Location: resultaten.php");
     exit;
   }
+  public function maaknieuwsbrief($id) {
+    $id = $this->beveilig($id);
+    $id = preg_replace('/\s+/S', "", $id);
+    if (strlen($id) > 25) {
+      return "De naam mag niet langer dan 25 karakters zijn!";
+    }
+    $tijd = time();
+    $sql = "INSERT INTO nieuwsbrief(randomid,aangemaaktop) VALUES('$id','$tijd')";
+    $resultaat = mysqli_query($this->connectie, $sql);
+    if ($resultaat) {
+      return "Het aanmaken van de nieuwsbrief is gelukt!<br>" . "Like: https://nieuwsfeedback.nl/stemmen.php?nieuwsbriefid=$id&actie=like <br>" . "Dislike: https://nieuwsfeedback.nl/stemmen.php?nieuwsbriefid=$id&actie=dislike";
+    } else {
+      return "Er is iets misgegaan bij het aanmaken van de nieuwsbrief :(";
+    }
+  }
 }

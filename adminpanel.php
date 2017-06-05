@@ -5,6 +5,7 @@ session_start();
 if (!isset($_SESSION["ingelogd"])) {
   //Als je niet bent ingelogd mag je hier weg
   header("Location: adminlogin.php");
+  exit;
 } else {
   //Importeer config
   include('classes/config.php');
@@ -33,6 +34,7 @@ if (!isset($_SESSION["ingelogd"])) {
       <p>Wat wil je doen?</p>
       <ul>
         <li><a href="resultaten.php">Resultaten inzien</a></li>
+        <li><a href="maaknieuwsbrief.php">Nieuwsbrief aanmaken</a></li>
       </ul>
     </section>
   </body>

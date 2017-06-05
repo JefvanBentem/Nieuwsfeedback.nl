@@ -5,6 +5,7 @@ session_start();
 if (!isset($_SESSION["ingelogd"])) {
   //Als je niet bent ingelogd mag je hier weg
   header("Location: adminlogin.php");
+  exit;
 } else {
   //Importeer alles
   include('classes/import.php');
@@ -16,4 +17,5 @@ if (!isset($_SESSION["ingelogd"])) {
   $object->verwijdernieuwsbrief($verwijderid);
   //Voor de zekerheid
   header("Location: resultaten.php");
+  exit;
 }
