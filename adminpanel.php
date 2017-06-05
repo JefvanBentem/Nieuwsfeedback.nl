@@ -16,6 +16,15 @@ if (!isset($_SESSION["ingelogd"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminpanel</title>
+    <style>
+      section {
+        width: 90%;
+        margin: 0 auto;
+      }
+      * {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -23,7 +32,7 @@ if (!isset($_SESSION["ingelogd"])) {
       <p>Hallo <?php echo adminusername; ?>,</p>
       <p>Wat wil je doen?</p>
       <ul>
-        <li><a href="#">Resultaten inzien</a></li>
+        <li><a href="resultaten.php">Resultaten inzien</a></li>
       </ul>
     </section>
   </body>
