@@ -7,7 +7,7 @@ session_start();
 //Check of iemand wel is ingelogd
 if (!isset($_SESSION["ingelogd"])) {
   //Als je niet bent ingelogd mag je hier weg
-  header("Location: http://www.hekmansuelmann.nl");
+  header("Location: adminlogin.php");
 } else {
   //Importeer alles
   include('classes/import.php');
