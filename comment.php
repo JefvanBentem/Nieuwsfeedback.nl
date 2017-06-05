@@ -97,6 +97,9 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         .tekst {
           margin-top: 20px;
         }
+        .logocontainer {
+          padding-top: 0px;
+        }
       }
     </style>
   </head>
