@@ -29,6 +29,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favi.png" sizes="16x16">
     <title>Adminlogin</title>
   </head>
   <body>

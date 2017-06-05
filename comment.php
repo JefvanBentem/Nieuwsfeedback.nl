@@ -33,6 +33,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favi.png" sizes="16x16">
     <title>Hekman Suelmann</title>
     <link href="fonts/Franklin.css" rel="stylesheet">
     <style>
@@ -70,8 +71,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         border-color: grey;
         width: 400px;
         height: 200px;
-        max-width: 90vw;
-        margin: 0 auto;
+        max-width: 85vw;
         resize: none;
         border-style: solid;
         font-family: 'Libre Franklin', sans-serif;
@@ -90,7 +90,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         padding: 5px 10px;
         border-style: solid;
       }
-      @media (max-width: 750px) {
+      @media (max-width: 850px) {
         .footer {
           display: none;
         }
