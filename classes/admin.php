@@ -48,7 +48,7 @@ class admin {
   //Krijg alle nieuwsbrieven
   public function krijgallenieuwsbrieven($startop) {
     $startop = $this->beveilig($startop);
-    $sql = "SELECT randomid FROM nieuwsbrief ORDER BY `nieuwsbrief`.`aangemaaktop` DESC LIMIT 10 OFFSET {$startop}";
+    $sql = "SELECT randomid FROM nieuwsbrief ORDER BY `nieuwsbrief`.`aangemaaktop` DESC LIMIT 10 OFFSET $startop";
     $resultaat = mysqli_query($this->connectie, $sql);
     return $resultaat;
   }

@@ -8,7 +8,7 @@ if (!isset($_SESSION["ingelogd"])) {
 } else {
   //Importeer alles
   include('classes/import.php');
-  $object = new admin;
+  $object = New admin;
 }
 ?>
 <!DOCTYPE html>
