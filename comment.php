@@ -68,6 +68,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         border-color: grey;
         width: 400px;
         height: 200px;
+        resize: none;
         border-style: solid;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 1.1em;
