@@ -47,8 +47,7 @@ if (!isset($_SESSION["ingelogd"])) {
         //Output de berichten
         echo "<li><p>";
         echo htmlentities($array['bericht']);
-        echo "</p>";
-        echo "<br></li>";
+        echo "</p></li>";
       }
       ?>
       </ul>
