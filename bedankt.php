@@ -23,6 +23,8 @@
   <body>
     <div class="containertekst">
       <p>Bedankt voor uw reactie.</p>
+      <p>U wordt nu automatisch doorgestuurd naar de homepage.</p>
     </div>
+    <script>setTimeout(function(){window.location.href='http://hekmansuelmann.nl/'},5000);</script>
   </body>
 </html>
