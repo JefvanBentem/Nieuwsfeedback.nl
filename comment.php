@@ -78,7 +78,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         color: white;
         padding: 5px 10px;
       }
-      @media (max-width: 550px) {
+      @media (max-width: 750px) {
         .footer {
           display: none;
         }
