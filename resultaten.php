@@ -25,8 +25,11 @@ if (!isset($_SESSION["ingelogd"])) {
       border: 1px solid black;
       border-collapse: collapse;
     }
+    .navteller {
+      float: left;
+    }
     .selected {
-      background-color: green;
+      text-decoration: underline;
     }
     </style>
   </head>
