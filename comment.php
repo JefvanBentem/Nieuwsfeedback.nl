@@ -67,11 +67,11 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         border-width: 2px;
         border-color: grey;
         width: 400px;
-        max-width: 85vw;
         height: 200px;
         border-style: solid;
         font-family: 'Libre Franklin', sans-serif;
         font-size: 1.1em;
+        color: grey;
       }
       .reactievak form input {
         margin-top: 15px;
