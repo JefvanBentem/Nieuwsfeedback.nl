@@ -57,7 +57,7 @@ if (!isset($_SESSION["ingelogd"])) {
       //Loop voor iedere nieuwsbrief
       while ($array = mysqli_fetch_array($krijgallenieuwsbrieven)) {
         //Zet de variabelen
-        $naam = $array['randomid'];
+        $naam = htmlentities($array['randomid']);
         $likes = $object->hoeveellikes($naam);
         $dislikes = $object->hoeveeldislikes($naam);
         $aantalcomments = $object->hoeveelcomments($naam);
