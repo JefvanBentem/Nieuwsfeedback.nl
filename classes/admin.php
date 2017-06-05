@@ -84,6 +84,11 @@ class admin {
     if (strlen($id) > 25) {
       return "De naam mag niet langer dan 25 karakters zijn!";
     }
+    $sql = "SELECT * FROM nieuwsbrief WHERE randomid = '$id'";
+    $resultaat = mysqli_query($this->connectie, $sql);
+    if (mysqli_num_rows($resultaat) <= 0) {
+      return "Die nieuwsbrief naam bestaat al!";
+    }
     $tijd = time();
     $sql = "INSERT INTO nieuwsbrief(randomid,aangemaaktop) VALUES('$id','$tijd')";
     $resultaat = mysqli_query($this->connectie, $sql);
