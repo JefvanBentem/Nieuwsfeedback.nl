@@ -85,7 +85,15 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         padding: 5px 10px;
         border-style: solid;
       }
-      .reactievak form input:visited {
+      .reactievak form textarea:focus {
+        border-color: grey;
+        outline: none;
+      }
+      .reactievak form textarea {
+        border-color: grey;
+        outline: none;
+      }
+      .reactievak form textarea:hover {
         border-color: grey;
         outline: none;
       }
