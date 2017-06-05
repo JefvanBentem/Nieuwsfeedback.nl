@@ -14,6 +14,11 @@ class admin {
   public function __destruct() {
     mysqli_close($this->connectie);
   }
+  //Functie voor het beveiligen van alles wat in de database gaat
+  public function beveilig($input) {
+    $input = mysqli_real_escape_string($this->connectie, $input);
+    return $input;
+  }
   //Tel het aantal nieuwsbrieven
   public function aantalnieuwsbrieven() {
     $sql = "SELECT COUNT(*) FROM nieuwsbrief";
