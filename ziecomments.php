@@ -28,6 +28,7 @@ if (!isset($_SESSION["ingelogd"])) {
   </head>
   <body>
     <section>
+      <ul>
       <?php
       //Nieuwsbrief
       $nieuwsbrief = $_GET['nieuwsbrief'];
@@ -44,12 +45,13 @@ if (!isset($_SESSION["ingelogd"])) {
       //Loop voor iedere nieuwsbrief
       while ($array = mysqli_fetch_array($krijgallecomments)) {
         //Output de berichten
-        echo "<p>";
-        echo $array['bericht'];
+        echo "<li><p>";
+        echo htmlentities($array['bericht']);
         echo "</p>";
-        echo "<br>";
+        echo "<br></li>";
       }
       ?>
+      </ul>
       <p>Pagina's:</p>
       <?php
       //Pagina systeem
