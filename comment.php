@@ -43,6 +43,8 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         position: absolute;
         bottom: 0px;
         left: 15px;
+        color: grey;
+        font-size: 0.9em;
       }
       .logocontainer {
         padding-top: 50px;
@@ -73,6 +75,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         font-family: 'Libre Franklin', sans-serif;
         font-size: 1.1em;
         color: grey;
+        outline: none;
       }
       .reactievak form input {
         margin-top: 15px;
@@ -84,18 +87,6 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         color: white;
         padding: 5px 10px;
         border-style: solid;
-      }
-      .reactievak form textarea:focus {
-        border-color: grey;
-        outline: none;
-      }
-      .reactievak form textarea {
-        border-color: grey;
-        outline: none;
-      }
-      .reactievak form textarea:hover {
-        border-color: grey;
-        outline: none;
       }
       @media (max-width: 750px) {
         .footer {
