@@ -23,7 +23,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   //Bericht posten
   $output = $object->postbericht($bericht, $nieuwsbriefid);
 }
-if (isset($_POST["bericht"] && !isset($_GET["nieuwsbriefid"])) {
+if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
   $output = "Je link is invalid!";
 }
 ?>
