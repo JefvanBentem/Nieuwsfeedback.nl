@@ -7,7 +7,7 @@ if ($message != 1 and $message != 0) {
 }
 //Zet het bericht op de variabele
 if ($message == 1) {
-  $message = "Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen, dan kunt u dat hier doen:";
+  $message = "Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen, dan kan dat hier:";
 } else {
   $message = "Oei, helaas heeft deze editie niet voldaan aan uw verwachtingen. Wij zijn erg blij met alle feedback, want zo kunnen wij onze nieuwsbrief blijven verbeteren. Zou u ons kunnen vertellen waarom u deze editie minder vond?";
 }
