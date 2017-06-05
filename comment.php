@@ -23,6 +23,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
   //Bericht posten
   $output = $object->postbericht($bericht, $nieuwsbriefid);
 }
+//Bericht als iemand niet het nieuwsbriefid heeft maar wel een bericht probeert te verzenden
 if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
   $output = "Je link is invalid!";
 }
