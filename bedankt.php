@@ -16,7 +16,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #2467a8;
+    }
+    .containertekst2 {
+      text-align: center;
     }
     * {
       margin: 0;
@@ -26,8 +28,8 @@
   <body>
     <div class="containertekst">
       <div class="containertekst2">
-        <p style="font-size:1.2em;">Bedankt voor uw reactie.</p>
-        <p>U wordt nu automatisch doorgestuurd naar de homepage.</p>
+        <p style="font-size:1.3em;">Bedankt voor uw reactie.</p>
+        <p style="color:grey;">U wordt nu automatisch doorgestuurd naar de homepage.</p>
       </div>
     </div>
     <script>setTimeout(function(){window.location.href='http://hekmansuelmann.nl/'},5000);</script>
