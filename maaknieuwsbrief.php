@@ -37,6 +37,7 @@ if (!isset($_SESSION["ingelogd"])) {
       <p><?php
       echo $output;
       ?></p>
+      <p><a href="adminpanel.php">Ga terug</a></p>
     </section>
   </body>
 </html>

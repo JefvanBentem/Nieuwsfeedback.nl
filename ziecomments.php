@@ -66,6 +66,7 @@ if (!isset($_SESSION["ingelogd"])) {
         echo "</div>";
       }
       ?>
+      <p><a href="resultaten.php">Ga terug</a></p>
     </section>
   </body>
 </html>
