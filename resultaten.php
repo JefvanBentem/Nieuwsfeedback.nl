@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 //Start de sessies
 session_start();
 //Check of iemand wel is ingelogd
@@ -62,7 +59,7 @@ if (!isset($_SESSION["ingelogd"])) {
         $likes = $object->hoeveellikes($naam);
         $dislikes = $object->hoeveeldislikes($naam);
         $aantalcomments = $object->hoeveelcomments($naam);
-        $ziecomment = "Komt nog";
+        $ziecomment = "<a href="ziecomments.php?nieuwsbrief=$naam">x</a>";
         $verwijder = "Komt nog";
         //Display in tabel
         echo "<tr>";
