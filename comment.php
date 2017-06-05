@@ -7,9 +7,9 @@ if ($message != 1 and $message != 0) {
 }
 //Zet het bericht op de variabele
 if ($message == 1) {
-  $message = "Bedankt voor uw reactie! Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen over deze editie, dan kan dat hier:";
+  $message = "Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen, dan kunt u dat hier doen:";
 } else {
-  $message = "Bedankt voor uw reactie! Jammer dat u deze editie wat minder vond. Laat hier achter wat wij in de volgende edities kunnen verbeteren:";
+  $message = "Oei, helaas heeft deze editie niet voldaan aan uw verwachtingen. Wij zijn erg blij met alle feedback, want zo kunnen wij onze nieuwsbrief blijven verbeteren. Zou u ons kunnen vertellen waarom u deze editie minder vond?";
 }
 //Als bericht en nieuwsbriefid zijn gezet
 if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
