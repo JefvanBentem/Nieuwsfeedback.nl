@@ -69,7 +69,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         width: 400px;
         max-width: 85vw;
         height: 200px;
-        box-shadow: none;
+        border-style: solid;
       }
       .reactievak form input {
         background-color: #115695;
@@ -78,7 +78,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         border-color: #115695;
         color: white;
         padding: 5px 10px;
-        box-shadow: none;
+        border-style: solid;
       }
       @media (max-width: 750px) {
         .footer {
