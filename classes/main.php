@@ -10,6 +10,10 @@ class main {
       die('De database werkt niet. Wij proberen dit zo spoedig mogelijk te verhelpen.');
     }
   }
+  //Sluit de database connectie
+  public function __destruct() {
+    mysqli_close($this->connectie);
+  }
   //Functie voor het beveiligen van alles wat in de database gaat
   public function beveilig($input) {
     $input = mysqli_real_escape_string($this->connectie, $input);
