@@ -1,18 +1,26 @@
 <?php
+//Zet een message variabele
 $message = $_GET["m"];
-if ($message != "1" and $message != "0") {
+//Als het niet 1 of 0 is dan is het 0
+if ($message != 1 and $message != 0) {
   $message = 1;
 }
+//Zet het bericht op de variabele
 if ($message == 1) {
   $message = "Bedankt voor uw reactie! Goed om te horen dat u deze editie leuk vond. Mocht u toch nog iets kwijt willen over deze editie, dan kan dat hier:";
 } else {
   $message = "Bedankt voor uw reactie! Jammer dat u deze editie wat minder vond. Laat hier achter wat wij in de volgende edities kunnen verbeteren:";
 }
+//Als bericht en nieuwsbriefid zijn gezet
 if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
+  //Variabelen zetten
   $bericht = $_POST["bericht"];
   $nieuwsbriefid = $_GET["nieuwsbriefid"];
+  //Alle classes importeren
   include 'classes/import.php';
+  //Object aanmaken
   $object = New main;
+  //Bericht posten
   $output = $object->postbericht($bericht, $nieuwsbriefid);
 }
 ?>
@@ -87,12 +95,14 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
         <h1>Bedankt voor uw reactie!</h1>
         <p class="grijs">
           <?php
+            //Ouput $message
             echo $message;
           ?>
         </p>
       </div>
       <div class="reactievak">
         <form action="comment.php<?php
+        //Zorgt ervoor dat als je op submit drukt dat de GET wordt meegestuurd
         if(isset($_GET["nieuwsbriefid"])) {
           echo "?nieuwsbriefid=" . $_GET["nieuwsbriefid"];
         }
@@ -102,6 +112,7 @@ if (isset($_POST["bericht"]) && isset($_GET["nieuwsbriefid"])) {
           <input type="submit">
         </form>
         <?php
+          //Output de output
           echo $output;
         ?>
       </div>
