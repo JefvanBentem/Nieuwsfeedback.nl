@@ -57,11 +57,24 @@ class admin {
     $row = mysqli_fetch_assoc($resultaat);
     return $row['COUNT(*)'];
   }
+  //Krijgallecomments
   public function krijgallecomments($startop, $nieuwsbrief) {
     $startop = $this->beveilig($startop);
     $nieuwsbrief = $this->beveilig($nieuwsbrief);
     $sql = "SELECT bericht FROM nieuwsbriefreactie WHERE nieuwsbriefid='$nieuwsbrief' ORDER BY `nieuwsbriefreactie`.`tijd` DESC LIMIT 10 OFFSET $startop";
     $resultaat = mysqli_query($this->connectie, $sql);
     return $resultaat;
+  }
+  //Verwijdernieuwsbrief
+  public function verwijdernieuwsbrief($id) {
+    $id = $this->beveilig($id);
+    $sql1 = "DELETE FROM nieuwsbrief WHERE randomid='$id'";
+    $sql2 = "DELETE FROM nieuwsbriefreactie WHERE nieuwsbriefid='$id'";
+    $sql3 = "DELETE FROM nieuwsbriefstem WHERE nieuwsbriefid='$id'";
+    $resultaat1 = mysqli_query($this->connectie, $sql1);
+    $resultaat2 = mysqli_query($this->connectie, $sql2);
+    $resultaat3 = mysqli_query($this->connectie, $sql3);
+    header("Location: resultaten.php");
+    exit;
   }
 }

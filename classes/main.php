@@ -41,6 +41,7 @@ class main {
         $m = 1;
       }
       header("Location: /comment.php?m=$m&nieuwsbriefid=$nieuwsbriefid");
+      exit;
     } else {
       return "Probeer het later opnieuw.";
     }
@@ -79,6 +80,7 @@ class main {
     $resultaat = mysqli_query($this->connectie, $sql);
     if ($resultaat) {
       header("Location: /bedankt.php");
+      exit;
     } else {
       return "Probeer het later opnieuw!";
     }
