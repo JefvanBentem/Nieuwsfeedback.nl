@@ -1,5 +1,15 @@
 <?php
-$nieuwsbrief = $_GET['nieuwsbrief'];
+//Start de sessies
+session_start();
+//Check of iemand wel is ingelogd
+if (!isset($_SESSION["ingelogd"])) {
+  //Als je niet bent ingelogd mag je hier weg
+  header("Location: adminlogin.php");
+} else {
+  //Importeer alles
+  include('classes/import.php');
+  $object = New admin;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,11 +17,49 @@ $nieuwsbrief = $_GET['nieuwsbrief'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ziecomments</title>
+    <style>
+    .navteller {
+      float: left;
+    }
+    .selected {
+      text-decoration: underline;
+    }
+    </style>
   </head>
   <body>
     <section>
       <?php
-      echo $nieuwsbrief;
+      //Nieuwsbrief
+      $nieuwsbrief = $_GET['nieuwsbrief'];
+      //Zoek de hoeveelheid pagina's uit
+      $hoeveelheidqueries = $object->hoeveelcomments();
+      $hoeveelheidpaginas = $hoeveelheidqueries / 10;
+      $hoeveelheidpaginas = ceil($hoeveelheidpaginas);
+      //Huidige pagina nummer
+      $page = isset($_GET['page']) ? $_GET['page'] : 0;
+      //Vanaf wat wil je zien
+      $vanafwelknummerwiljezien = $page * 10;
+      //Krijg de nieuwsbrieven
+      $krijgallecomments = $object->krijgallecomments($vanafwelknummerwiljezien, $nieuwsbrief);
+      //Loop voor iedere nieuwsbrief
+      while ($array = mysqli_fetch_array($krijgallecomments)) {
+        //Output de berichten
+        echo "<p>";
+        echo $array['bericht'];
+        echo "</p>";
+        echo "<br>";
+      }
+      ?>
+      <p>Pagina's:</p>
+      <?php
+      //Pagina systeem
+      $i=0;
+      for($i=0; $i<$hoeveelheidpaginas; $i++) {
+        $class = $i == $page ? 'selected' : '';
+        echo "<div class='navteller {$class}'>";
+        echo "<a style='padding:8px;' href='?page={$i}'>{$i}</a>";
+        echo "</div>";
+      }
       ?>
     </section>
   </body>

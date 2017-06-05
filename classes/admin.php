@@ -57,4 +57,11 @@ class admin {
     $row = mysqli_fetch_assoc($resultaat);
     return $row['COUNT(*)'];
   }
+  public function krijgallecomments($startop, $nieuwsbrief) {
+    $startop = $this->beveilig($startop);
+    $nieuwsbrief = $this->beveilig($nieuwsbrief);
+    $sql = "SELECT bericht FROM nieuwsbriefreactie WHERE nieuwsbriefid='$nieuwsbrief' ORDER BY `nieuwsbriefreactie`.`tijd` DESC LIMIT 10 OFFSET $startop";
+    $resultaat = mysqli_query($this->connectie, $sql);
+    return $resultaat;
+  }
 }

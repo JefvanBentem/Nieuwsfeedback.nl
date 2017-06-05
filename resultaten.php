@@ -59,8 +59,8 @@ if (!isset($_SESSION["ingelogd"])) {
         $likes = $object->hoeveellikes($naam);
         $dislikes = $object->hoeveeldislikes($naam);
         $aantalcomments = $object->hoeveelcomments($naam);
-        $ziecomment = "<a href='ziecomments.php?nieuwsbrief=$naam'>x</a>";
-        $verwijder = "Komt nog";
+        $ziecomment = "<a href='ziecomments.php?nieuwsbrief=$naam'>&#916;</a>";
+        $verwijder = "<a href='verwijder.php?nieuwsbrief=$naam'>&#916;</a>";
         //Display in tabel
         echo "<tr>";
         echo "<td>$naam</td>";
