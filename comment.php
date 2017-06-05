@@ -72,6 +72,7 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         border-style: solid;
       }
       .reactievak form input {
+        margin-top: 15px;
         background-color: #115695;
         border-radius: 15px;
         border-width: 2px;
