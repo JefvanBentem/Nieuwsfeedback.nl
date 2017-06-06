@@ -63,7 +63,7 @@ if (!isset($_SESSION["ingelogd"])) {
       for($i=0; $i<$hoeveelheidpaginas; $i++) {
         $class = $i == $page ? 'selected' : '';
         echo "<div class='navteller {$class}'>";
-        echo "<a style='padding:8px;' href='?page={$i}'>{$i}</a>";
+        echo "<a style='padding:8px;' href='?page={$i}&nieuwsbrief={$nieuwsbrief}'>{$i}</a>";
         echo "</div>";
       }
       ?>
