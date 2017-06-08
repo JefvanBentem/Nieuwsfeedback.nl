@@ -69,6 +69,10 @@ class main {
     if (strlen($bericht) > 2000) {
       return "Het bericht mag niet langer zijn dan 2000 karakters.";
     }
+    $kleinbericht = preg_replace('/\s+/S', "", $bericht);
+    if (strlen($kleinbericht) == 0) {
+      return "Je moet wel wat invullen.";
+    }
     $check = $this->checknieuwsbriefid($nieuwsbriefid);
     if (!check) {
       return "Dat is geen bestaande nieuwsbriefid";

@@ -84,6 +84,9 @@ class admin {
     if (strlen($id) > 25) {
       return "De naam mag niet langer dan 25 karakters zijn!";
     }
+    if (strlen($id) == 0) {
+      return "Je moet wel wat invullen.";
+    }
     $sql = "SELECT * FROM nieuwsbrief WHERE randomid = '$id'";
     $resultaat = mysqli_query($this->connectie, $sql);
     if (mysqli_num_rows($resultaat) > 0) {
