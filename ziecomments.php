@@ -32,7 +32,7 @@ if (!isset($_SESSION["ingelogd"])) {
     <section>
       <ul>
       <?php
-      //Nieuwsbrief
+      //Zet de variabelen
       $nieuwsbrief = $_GET['nieuwsbrief'];
       //Zoek de hoeveelheid pagina's uit
       $hoeveelheidqueries = $object->hoeveelcomments($nieuwsbrief);

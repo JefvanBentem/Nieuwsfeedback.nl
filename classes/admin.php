@@ -1,7 +1,7 @@
 <?php
 class admin {
   //Database connectie variable
-  protected $connectie;
+  private $connectie;
 
   //Functie voor het aanmaken van een database connectie
   public function __construct() {

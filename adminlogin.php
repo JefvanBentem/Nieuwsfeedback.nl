@@ -16,10 +16,12 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
   include('classes/config.php');
   //Verificatie van gebruikersnaam en wachtwoord
   if ($gebruikersnaam == adminusername && $wachtwoord == adminwachtwoord) {
+    //Goede inlog maak de sessie
     $_SESSION["ingelogd"] = true;
     header("Location: /adminpanel.php");
     exit;
   } else {
+    //Geen goede inlog
     $message = "Foute inloggegevens!";
   }
 }

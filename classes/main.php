@@ -1,7 +1,7 @@
 <?php
 class main {
   //Database connectie variable
-  protected $connectie;
+  private $connectie;
 
   //Functie voor het aanmaken van een database connectie
   public function __construct() {
@@ -65,6 +65,7 @@ class main {
       return true;
     }
   }
+  //Functie voor het posten van berichten
   public function postbericht($bericht, $nieuwsbriefid) {
     if (strlen($bericht) > 2000) {
       return "Het bericht mag niet langer zijn dan 2000 karakters.";
