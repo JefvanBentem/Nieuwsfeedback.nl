@@ -19,6 +19,9 @@ if (!isset($_SESSION["ingelogd"])) {
     <link rel="icon" type="image/png" href="img/favi.png" sizes="16x16">
     <title>Adminpanel</title>
     <style>
+      body {
+        font-family: 'Libre Franklin', sans-serif;
+      }
       section {
         width: 90%;
         margin: 0 auto;
@@ -38,5 +41,23 @@ if (!isset($_SESSION["ingelogd"])) {
         <li><a href="maaknieuwsbrief.php">Nieuwsbrief aanmaken</a></li>
       </ul>
     </section>
+    <noscript id="styles">
+      <link href="fonts/Franklin.css" rel="stylesheet">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() {
+          window.setTimeout(loadDeferredStyles, 0);
+      });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
   </body>
 </html>

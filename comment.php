@@ -37,7 +37,6 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favi.png" sizes="16x16">
     <title>Hekman Suelmann</title>
-    <link href="fonts/Franklin.css" rel="stylesheet">
     <style>
       body {
         font-family: 'Libre Franklin', sans-serif;
@@ -145,5 +144,23 @@ if (isset($_POST["bericht"]) && !isset($_GET["nieuwsbriefid"])) {
         </p>
       </div>
     </footer>
+    <noscript id="styles">
+      <link href="fonts/Franklin.css" rel="stylesheet">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() {
+          window.setTimeout(loadDeferredStyles, 0);
+      });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
   </body>
 </html>

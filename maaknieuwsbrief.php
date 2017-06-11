@@ -27,6 +27,11 @@ if (!isset($_SESSION["ingelogd"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favi.png" sizes="16x16">
     <title>Maaknieuwsbrief</title>
+    <style>
+    body {
+      font-family: 'Libre Franklin', sans-serif;
+    }
+    </style>
   </head>
   <body>
     <section>
@@ -40,5 +45,23 @@ if (!isset($_SESSION["ingelogd"])) {
       ?></p>
       <p><a href="adminpanel.php">Ga terug</a></p>
     </section>
+    <noscript id="styles">
+      <link href="fonts/Franklin.css" rel="stylesheet">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+          var addStylesNode = document.getElementById("styles");
+          var replacement = document.createElement("div");
+          replacement.innerHTML = addStylesNode.textContent;
+          document.body.appendChild(replacement)
+          addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() {
+          window.setTimeout(loadDeferredStyles, 0);
+      });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
   </body>
 </html>
