@@ -58,6 +58,11 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
       color: white;
       border: none;
     }
+    @media (max-width: 850px) {
+      .forumcontainer {
+        width: 90%;
+      }
+    }
     </style>
   </head>
   <body>
