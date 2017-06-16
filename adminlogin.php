@@ -37,18 +37,39 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     body {
       font-family: 'Libre Franklin', sans-serif;
     }
+    * {
+      margin: 0;
+    }
+    .forumcontainer {
+      padding-top: 30vh;
+      width: 330px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .forumcontainer input {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 50px;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+    .blauwgroot {
+      background-color: #0c5293;
+      color: white;
+      border: none;
+    }
     </style>
   </head>
   <body>
     <section>
-      <h1>Adminlogin</h1>
-      <form action="adminlogin.php" method="post">
-        <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required>
-        <br>
-        <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
-        <br>
-        <input type="submit">
-      </form>
+      <div class="forumcontainer">
+        <form action="adminlogin.php" method="post">
+          <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required>
+          <br>
+          <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
+          <br>
+        </form>
+      </div>
       <p><?php
         //Message display
         echo $message;
