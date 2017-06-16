@@ -68,6 +68,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
           <br>
           <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
           <br>
+          <input type="submit" class="blauwgroot" value="Verzenden">
         </form>
       </div>
       <p><?php
