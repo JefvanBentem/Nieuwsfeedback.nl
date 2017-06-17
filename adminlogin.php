@@ -62,6 +62,9 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
       color: white;
       border: none;
     }
+    .marginbottom {
+      margin-bottom: 10px;
+    }
     @media (max-width: 500px) {
       .forumcontainer {
         width: 90%;
@@ -75,9 +78,9 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
       <div class="forumcontainer">
         <div class="forumcolor">
           <form action="adminlogin.php" method="post">
-            <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required>
+            <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" class="marginbottom" required>
             <br>
-            <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
+            <input type="password" name="wachtwoord" placeholder="Wachtwoord" class="marginbottom" required>
             <br>
             <input type="submit" class="blauwgroot" value="Verzenden">
           </form>
