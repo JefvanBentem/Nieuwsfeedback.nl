@@ -36,7 +36,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     <style>
     body {
       font-family: 'Libre Franklin', sans-serif;
-      background-color: #0c5293;
+      background-color: #f6f6f6;
     }
     .forumcolor {
       background-color: white;
