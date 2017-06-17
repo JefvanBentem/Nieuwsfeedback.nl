@@ -94,6 +94,13 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     <noscript id="styles">
       <link href="fonts/Franklin.css" rel="stylesheet">
     </noscript>
+    <footer>
+      <div class="footer">
+        <p>
+          &#9400; Copyright 2017 Solid Design - All Rights Reserved
+        </p>
+      </div>
+    </footer>
     <script>
       var loadDeferredStyles = function() {
           var addStylesNode = document.getElementById("styles");
