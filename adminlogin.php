@@ -53,7 +53,6 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     }
     .forumcontainer input {
       width: 100%;
-      margin-bottom: 10px;
       height: 50px;
       padding-left: 10px;
       box-sizing: border-box;
