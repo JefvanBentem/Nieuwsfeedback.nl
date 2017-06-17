@@ -66,7 +66,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     @media (max-width: 500px) {
       .forumcontainer {
         width: 90%;
-        padding-top: 50px;
+        padding-top: 25px;
       }
     }
     </style>
