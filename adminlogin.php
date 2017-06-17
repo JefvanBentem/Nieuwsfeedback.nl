@@ -40,13 +40,14 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
     }
     .forumcolor {
       background-color: white;
+      padding: 20px;
     }
     * {
       margin: 0;
     }
     .forumcontainer {
       padding-top: 30vh;
-      width: 330px;
+      width: 350px;
       margin: 0 auto;
       text-align: center;
     }
