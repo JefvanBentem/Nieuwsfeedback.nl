@@ -61,6 +61,7 @@ if (isset($_POST['gebruikersnaam']) && isset($_POST['wachtwoord'])) {
       background-color: #0c5293;
       color: white;
       border: none;
+      cursor:pointer;
     }
     .marginbottom {
       margin-bottom: 10px;
